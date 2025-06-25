@@ -14,6 +14,4 @@ steps:
 images:
   - 'asia-south1-docker.pkg.dev/ci-cd-pipeline-464008/go-app-repo/go-ci-cd-app:latest'
 
-options:
-  logging: GCS_ONLY
-  logsBucket: gs://ci-cd-logs-bucket
+logsBucket: gs://ci-cd-logs-bucket
