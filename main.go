@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 )
 
@@ -15,6 +16,12 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.HandleFunc("./health", healthHandler)
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "Hello! Go CI/CD App Running 🚀")
+	})
+
+	http.HandleFunc("/health", healthHandler)
+
+	fmt.Println("Listening on :8080")
 	http.ListenAndServe(":8080", nil)
 }
