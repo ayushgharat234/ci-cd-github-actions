@@ -1,8 +1,8 @@
 # Stage 1: Build
 FROM golang:1.21 AS builder
 WORKDIR /app
-COPY /app/go.mod ./
-COPY /app/*.go ./
+COPY go.mod .
+COPY *.go .
 RUN go build -o server
 
 # Stage 2: Run
