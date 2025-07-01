@@ -17,7 +17,7 @@ This repository contains a simple Go web server with a `/health` endpoint and a 
 
 ## 🏗️ Architecture
 
-> **[Insert your architecture diagram here once uploaded]**
+> ![Architecture Diagram](architecture/architecture.png)
 
 - **Source Code**: GitHub
 - **CI/CD**: GitHub Actions (build, test, Dockerize, push)
